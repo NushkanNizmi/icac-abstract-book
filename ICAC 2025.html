@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Launch GIF Page</title>
+
+  <!-- IMPORTANT for mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f4f4f4;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 24px 16px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive logo styling */
+    .logo-img {
+      max-width: 30%;      /* each logo takes up about a third on desktop */
+      height: auto;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      padding: 0 8px;
+    }
+
+    .launch-btn {
+      display: inline-block;
+      padding: 18px 40px;   /* Bigger button */
+      font-size: 20px;      /* Larger text */
+      font-weight: 600;
+      border-radius: 50px;  /* Smooth rounded button */
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      background: #007bff;
+      color: #ffffff;
+      box-shadow: 0 8px 20px rgba(0, 123, 255, 0.35);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .launch-btn:hover {
+      background: #005fcc;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 123, 255, 0.45);
+    }
+
+    .launch-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.25);
+    }
+
+    /* MOBILE STYLES */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px 12px;
+      }
+
+      .logos {
+        gap: 12px;
+      }
+
+      .logo-img {
+        max-width: 70%;   /* logos stack nicely and become bigger on mobile */
+      }
+
+      h1 {
+        font-size: 18px;
+      }
+
+      .launch-btn {
+        width: 100%;
+        max-width: 280px;
+        font-size: 18px;
+        padding: 14px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- LOGOS SECTION -->
+    <div class="logos">
+      <!-- Make sure these files are in the SAME folder as this HTML and have EXACT names -->
+      <img src="2_MAIN_LANDSCAPE_Null_BG_PNG.png" class="logo-img" alt="Logo 1">
+      <img src="SLIIT-FOC-logo.png" class="logo-img" alt="Logo 2">
+      <img src="ICAC2025-logo.png" class="logo-img" alt="Logo 3">
+    </div>
+
+    <h1>ICAC 2025 Abstract Book</h1>
+
+    <!-- Button that opens MP4 (works on mobile too if file is accessible) -->
+    <a class="launch-btn" href="./COVERPAGEANIMATED3.mp4" target="_blank">
+
+
+      Launch
+    </a>
+  </div>
+</body>
+</html>
